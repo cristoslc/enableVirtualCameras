@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# README
+# This script removes the code signatures from applications, which typically allows them to use virtual camera interfaces on macOS. Tested only on Catalina. YMMV, use at your own risk, YOLO, etc.
+
 backup_and_unsign () {
 app_path=$1
 rm -R "$app_path.bak"
@@ -19,7 +22,7 @@ backup_and_unsign "/Applications/Microsoft Teams.app"
 # Zoom
 # from https://nerdschalk.com/how-to-fix-virtual-camera-not-working-problem-on-zoom/
 # note: may not be needed with latest Zoom. Removing to test.
-# app_path="/Applications/zoom.us.app"
+# backup_and_unsign "/Applications/zoom.us.app"
 
 # Slack
 backup_and_unsign "/Applications/Slack.app"
